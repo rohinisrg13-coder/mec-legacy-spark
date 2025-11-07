@@ -1,74 +1,78 @@
-import { Cpu, Cog, Zap, Building, FlaskConical, Radio } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import deptIT from "@/assets/dept-it.png";
+import deptCyber from "@/assets/dept-cyber.png";
+import deptAI from "@/assets/dept-ai.png";
+import deptECE from "@/assets/dept-ece.png";
 
 const Departments = () => {
   const departments = [
     {
-      icon: Cpu,
-      name: "Computer Science & Engineering",
-      description: "AI, Machine Learning, Software Development, and Cybersecurity",
-      color: "primary",
+      image: deptIT,
+      name: "B.Tech. in Information Technology (IT)",
+      description: "Ace Computing, Programming & System Design to build innovative software & technology solutions.",
+      gradient: "gradient-lime",
     },
     {
-      icon: Zap,
-      name: "Electrical & Electronics",
-      description: "Power Systems, Embedded Systems, and IoT Technologies",
-      color: "accent",
+      image: deptCyber,
+      name: "B.E. in Computer Science & Engineering (Cyber Security)",
+      description: "Secure the digital world with advanced cyber security techniques and ethical hacking skills.",
+      gradient: "gradient-coral",
     },
     {
-      icon: Cog,
-      name: "Mechanical Engineering",
-      description: "Robotics, Automation, Manufacturing, and Design",
-      color: "primary",
+      image: deptAI,
+      name: "B.E. in Artificial Intelligence & Machine Learning",
+      description: "Master AI algorithms, deep learning, and data science to build intelligent systems.",
+      gradient: "gradient-purple",
     },
     {
-      icon: Building,
-      name: "Civil Engineering",
-      description: "Structural Design, Urban Planning, and Sustainable Construction",
-      color: "accent",
+      image: deptECE,
+      name: "B.E. in Electronics & Communication Engineering",
+      description: "Design cutting-edge electronics, communication systems, and embedded technologies.",
+      gradient: "gradient-blue",
     },
     {
-      icon: FlaskConical,
-      name: "Chemical Engineering",
-      description: "Process Engineering, Nanotechnology, and Green Chemistry",
-      color: "primary",
+      image: deptIT,
+      name: "B.E. in Mechanical Engineering",
+      description: "Learn robotics, automation, manufacturing processes, and innovative design.",
+      gradient: "gradient-orange",
     },
     {
-      icon: Radio,
-      name: "Electronics & Communication",
-      description: "VLSI, Signal Processing, and Wireless Communications",
-      color: "accent",
+      image: deptECE,
+      name: "B.E. in Civil Engineering",
+      description: "Build sustainable infrastructure, urban planning, and architectural innovations.",
+      gradient: "gradient-cyan",
     },
   ];
 
   return (
-    <section id="departments" className="py-20 bg-muted/30">
+    <section id="departments" className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our <span className="text-gradient">Departments</span>
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Explore our diverse range of engineering disciplines, each offering cutting-edge curriculum and state-of-the-art facilities.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {departments.map((dept, index) => (
             <Card
               key={index}
-              className="border-2 hover:border-primary transition-smooth hover:shadow-elegant group cursor-pointer"
+              className={`${dept.gradient} border-0 rounded-[2rem] overflow-hidden hover:scale-105 transition-smooth cursor-pointer shadow-lg`}
             >
-              <CardHeader>
-                <div className={`w-14 h-14 ${dept.color === 'primary' ? 'gradient-primary' : 'bg-accent'} rounded-lg flex items-center justify-center mb-4 group-hover:shadow-glow transition-smooth`}>
-                  <dept.icon className={`w-7 h-7 ${dept.color === 'primary' ? 'text-primary-foreground' : 'text-accent-foreground'}`} />
+              <CardContent className="p-8 flex flex-col items-center text-center space-y-6">
+                <div className="w-full h-48 flex items-center justify-center mb-4">
+                  <img
+                    src={dept.image}
+                    alt={dept.name}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
-                <CardTitle className="text-xl group-hover:text-primary transition-smooth">
+                <h3 className="text-2xl font-bold text-foreground">
                   {dept.name}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base">{dept.description}</CardDescription>
+                </h3>
+                <p className="text-foreground/90 text-base leading-relaxed">
+                  {dept.description}
+                </p>
+                <Button 
+                  className="bg-foreground text-background hover:bg-foreground/90 rounded-full px-8 py-6 text-base font-semibold"
+                >
+                  Let's Chat
+                </Button>
               </CardContent>
             </Card>
           ))}

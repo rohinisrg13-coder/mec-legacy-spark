@@ -45,6 +45,14 @@ All colors MUST be HSL.
     --gradient-accent: linear-gradient(135deg, hsl(220 80% 45%), hsl(45 90% 55%));
     --gradient-hero: linear-gradient(135deg, hsl(220 85% 35% / 0.95), hsl(220 80% 45% / 0.9));
     
+    /* Vibrant department gradients */
+    --gradient-purple: linear-gradient(135deg, hsl(270 80% 65%), hsl(280 70% 55%));
+    --gradient-lime: linear-gradient(135deg, hsl(75 85% 70%), hsl(85 80% 60%));
+    --gradient-coral: linear-gradient(135deg, hsl(10 85% 70%), hsl(0 80% 65%));
+    --gradient-blue: linear-gradient(135deg, hsl(220 85% 65%), hsl(210 80% 55%));
+    --gradient-orange: linear-gradient(135deg, hsl(35 90% 65%), hsl(25 85% 60%));
+    --gradient-cyan: linear-gradient(135deg, hsl(185 85% 65%), hsl(175 80% 60%));
+    
     --shadow-md: 0 4px 12px hsl(220 80% 45% / 0.1);
     --shadow-lg: 0 10px 30px hsl(220 80% 45% / 0.15);
     --shadow-glow: 0 0 40px hsl(45 90% 55% / 0.3);
@@ -105,6 +113,14 @@ All colors MUST be HSL.
     --gradient-accent: linear-gradient(135deg, hsl(220 80% 55%), hsl(45 90% 60%));
     --gradient-hero: linear-gradient(135deg, hsl(220 85% 15% / 0.95), hsl(220 80% 25% / 0.9));
     
+    /* Vibrant department gradients - dark mode */
+    --gradient-purple: linear-gradient(135deg, hsl(270 75% 60%), hsl(280 65% 50%));
+    --gradient-lime: linear-gradient(135deg, hsl(75 80% 65%), hsl(85 75% 55%));
+    --gradient-coral: linear-gradient(135deg, hsl(10 80% 65%), hsl(0 75% 60%));
+    --gradient-blue: linear-gradient(135deg, hsl(220 80% 60%), hsl(210 75% 50%));
+    --gradient-orange: linear-gradient(135deg, hsl(35 85% 60%), hsl(25 80% 55%));
+    --gradient-cyan: linear-gradient(135deg, hsl(185 80% 60%), hsl(175 75% 55%));
+    
     --shadow-md: 0 4px 12px hsl(220 80% 10% / 0.5);
     --shadow-lg: 0 10px 30px hsl(220 80% 10% / 0.6);
     --shadow-glow: 0 0 40px hsl(45 90% 60% / 0.4);
@@ -136,6 +152,30 @@ All colors MUST be HSL.
   
   .gradient-hero {
     background: var(--gradient-hero);
+  }
+  
+  .gradient-purple {
+    background: var(--gradient-purple);
+  }
+  
+  .gradient-lime {
+    background: var(--gradient-lime);
+  }
+  
+  .gradient-coral {
+    background: var(--gradient-coral);
+  }
+  
+  .gradient-blue {
+    background: var(--gradient-blue);
+  }
+  
+  .gradient-orange {
+    background: var(--gradient-orange);
+  }
+  
+  .gradient-cyan {
+    background: var(--gradient-cyan);
   }
   
   .shadow-elegant {
