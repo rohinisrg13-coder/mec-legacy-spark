@@ -9,13 +9,13 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto space-y-6 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6">
-            Madras Engineering College
+        Madras Engineering College
           </h1>
           <p className="text-xl md:text-2xl text-foreground/90 mb-8 font-medium">
-            Engineering Excellence, Inspiring Innovation
+            rohini Excellence, Inspiring Innovation
           </p>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12">
-            Join a legacy of innovation and academic excellence. Shape the future with cutting-edge research, world-class faculty, and state-of-the-art facilities.
+            if you join in the madras engineering college you will be placed in a reputed company with high salary and you learn about more thing of technologies. once you sholud understant the lessons you are a knowledgeful person 
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="gradient-primary text-primary-foreground text-lg px-8 hover:opacity-90 transition-smooth">
